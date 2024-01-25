@@ -13,9 +13,9 @@ Vagrant.configure("2") do |config|
 
   master_ip = "10.10.10.100"
   worker_start_subnet = "10.10.10"
-  worker_start_octal = 100 # we always at 1 so first worker starts at .101
+  worker_start_octal = 100 # we always start at an index of 1, so first worker starts at .101
   distro = "ubuntu/jammy64"
-  workers = 3
+  workers = 2
 
   config.vm.define "master" do |master|
     master.vm.box = distro
