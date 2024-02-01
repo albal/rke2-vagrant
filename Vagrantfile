@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
     v.cpus = 2    
     v.memory = 4096
     v.linked_clone = true
+    v.customize ["modifyvm", :id, "--groups", "/RKEv2"]
   end
 
   master_ip = "10.10.10.100"
